@@ -103,4 +103,3 @@ class Rectangle:
             return (self.width * 2) + (self.height * 2)
         else:
             return 0
-        
