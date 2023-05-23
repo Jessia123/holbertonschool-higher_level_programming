@@ -26,12 +26,17 @@ Public class attribute number_of_instances:
     Initialized to 0
     Incremented during each new instance instantiation
     Decremented during each instance deletion
+Public class attribute print_symbol:
+    Initialized to #
+    Used as symbol for string representation
+    Can be any type
 """
 
 
 class Rectangle:
     """Rectangle class"""
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """
@@ -122,7 +127,7 @@ class Rectangle:
         if self.width > 0 and self.height > 0:
             for row in range(self.height):
                 for col in range(self.width):
-                    string += '#'
+                    string += str(self.print_symbol)
                 if row < self.height - 1:
                     string += '\n'
             return string
